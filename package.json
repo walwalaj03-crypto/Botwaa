@@ -1,0 +1,11 @@
+{
+  "name": "hendar-bot-wa",
+  "version": "1.0.0",
+  "description": "HENDAR BOT WA store and QRIS checkout",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
