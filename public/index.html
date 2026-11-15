@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080d0b"><title>HENDAR BOT WA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">H</span><span>HENDAR<span class="green"> BOT WA</span></span></a><div class="top-right"><span class="live-dot"></span><span id="navStatus">Secure panel</span></div></header>
+<main class="wrap">
+<section id="authView" class="auth-layout">
+  <div class="hero">
+    <div class="eyebrow"><span class="pulse"></span> AUTOMATION ACCESS • HENDAR</div>
+    <h1>Power up your<br><span class="gradient">WhatsApp</span><br>experience.</h1>
+    <p class="muted hero-copy">Satu tempat untuk mengaktifkan akses HENDAR BOT WA. Pilih paket, bayar QRIS, dan klaim kode aksesmu.</p>
+    <div class="feature-row"><span>✦ QRIS otomatis</span><span>✦ Aktivasi cepat</span><span>✦ Bantuan bot</span></div>
+  </div>
+  <div class="panel auth-panel">
+    <div class="tabs"><button class="tab active" data-tab="login">Masuk</button><button class="tab" data-tab="register">Daftar</button></div>
+    <div id="loginForm">
+      <h2>Selamat datang</h2><p class="muted small">Masuk ke akun HENDAR kamu.</p>
+      <label>Email</label><input id="loginEmail" type="email" placeholder="nama@email.com" autocomplete="email">
+      <label>Password</label><input id="loginPassword" type="password" placeholder="Masukkan password" autocomplete="current-password">
+      <button class="btn primary full" id="loginBtn">Masuk ke dashboard <span>→</span></button>
+    </div>
+    <div id="registerForm" class="hidden">
+      <h2>Buat akun</h2><p class="muted small">Daftar untuk membeli akses bot.</p>
+      <label>Username</label><input id="regUsername" placeholder="Username" maxlength="24">
+      <label>Email</label><input id="regEmail" type="email" placeholder="nama@email.com">
+      <label>Password</label><input id="regPassword" type="password" placeholder="Minimal 8 karakter">
+      <button class="btn primary full" id="registerBtn">Buat akun <span>→</span></button>
+    </div>
+    <p class="hint">Dengan melanjutkan, kamu menyetujui ketentuan layanan.</p>
+  </div>
+</section>
+
+<section id="dashboardView" class="hidden">
+  <div class="dash-head"><div><div class="eyebrow">MEMBER AREA</div><h1>Halo, <span class="gradient" id="welcomeName">User</span></h1><p class="muted">Kelola trial dan paket akses HENDAR BOT WA.</p></div><button class="btn ghost" id="logoutBtn">Keluar ↗</button></div>
+  <div class="dash-grid">
+    <div class="panel trial-card"><div class="card-top"><span class="pill">LIMITED ACCESS</span><span class="trial-icon">✦</span></div><h2>Free Trial</h2><p class="muted">Coba akses selama 1 hari tanpa biaya. Trial hanya bisa diaktifkan satu kali per akun.</p><button id="trialBtn" class="btn trial full">Aktifkan Free Trial 1 Hari</button><p id="trialInfo" class="tiny muted"></p></div>
+    <div class="panel help-card"><div class="eyebrow">NEED HELP?</div><h2>Aktivasi kode</h2><p class="muted">Setelah pembayaran berhasil, salin kode yang diberikan lalu kirim ke bot WhatsApp kami.</p><a class="btn ghost full" href="https://t.me/Hendarwabot" target="_blank" rel="noreferrer">Buka @Hendarwabot ↗</a></div>
+  </div>
+  <div class="section-title"><div><div class="eyebrow">PILIH AKSES</div><h2>Daftar Paket</h2></div><span class="muted tiny">Pembayaran QRIS</span></div>
+  <div id="products" class="products"></div>
+  <div id="ownerEntry" class="owner-entry hidden"><button class="btn owner-btn" id="ownerBtn">⚙ Owner Panel</button></div>
+  <div id="paymentPanel" class="panel payment-panel hidden"></div>
+</section>
+
+<section id="ownerView" class="hidden">
+ <div class="dash-head"><div><div class="eyebrow">ADMINISTRATION</div><h1>Owner <span class="gradient">Panel</span></h1><p class="muted">Kelola stok kode akses HENDAR BOT WA.</p></div><button class="btn ghost" id="backDash">← Dashboard</button></div>
+ <div id="stats" class="stats"></div>
+ <div class="panel owner-form"><div class="eyebrow">INVENTORY MANAGER</div><h2>Tambah kode produk</h2><p class="muted small">Kode akan diberikan otomatis setelah pembayaran paket terkait berstatus paid.</p>
+ <div class="form-grid"><div><label>Pilih paket</label><select id="codeProduct"></select></div><div><label>Kode akses</label><input id="codeValue" placeholder="Contoh: Hendar1010"></div></div><button class="btn primary" id="addCodeBtn">＋ Tambahkan kode</button></div>
+ <div class="panel inventory"><div class="section-title"><div><div class="eyebrow">STOCK</div><h2>Daftar kode</h2></div><button class="btn ghost small-btn" id="refreshCodes">Refresh</button></div><div id="codeList"></div></div>
+</section>
+<div id="toast" class="toast"></div>
+</main>
+<footer>© <span id="year"></span> HENDAR BOT WA <span class="footer-dot">•</span> Built for members</footer>
+<script src="/app.js"></script>
+</body></html>
